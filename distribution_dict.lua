@@ -34,7 +34,7 @@ return {
                 local buf=STRING.newBuf()
                 if #deletion>0 then buf:put("[-] "..concat(deletion,";").."\n") end
                 if #addition>0 then buf:put("[+] "..concat(addition,";").."\n") end
-                local wordCnt,entryCnt=TABLE.getSize(zict)-1,#DD.entryList
+                local wordCnt,entryCnt=TABLE.getSize(zict)-1,#zict.entryList
                 buf:put("知识库已刷新！现在有"..wordCnt.."个关键词和"..entryCnt.."个词条")
                 S:send(buf)
             end

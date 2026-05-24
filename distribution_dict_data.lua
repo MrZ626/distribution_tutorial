@@ -263,8 +263,7 @@ local orig={
 local keyConcepts={
     {
         word="发行商说",
-        text="《发行商说》是True Blue关于自研自发的系列视频，可发送 #1 ~ #"..#orig.." 查看对应视频",
-        link="github🐙.com/MrZ626/distribution_tutorial （去掉防吞章鱼）",
+        text="《发行商说》是True Blue关于自研自发的系列视频，可发送 #1 ~ #"..#orig.." 查看对应视频\n第一期传送门 b23.tv/BV1A4yrYkEfq",
     },
     {
         word="发行",
@@ -327,8 +326,12 @@ local keyConcepts={
         text="独立游戏海外宣发主要渠道是社交媒体，详见 #17 #18 #25",
     },
     {
-        word="AI",
-        text="如果你不用AI自己也能做，那你才可以用，否则不要想着用；如果用了，记得在Steam标明否则会被罚，详见 #21",
+        word="AI;AI美术",
+        text="如果你不用AI自己也能做，那你才可以用，否则不要想着用；用了记得在Steam标明否则会被罚，详见 #21",
+    },
+    {
+        word="AI音乐",
+        text="相对AI美术争议稍微小一点，熟悉音乐流派和常见用途的话拿来铺氛围通常可用；用了记得在Steam标明否则会被罚，详见 #21",
     },
     {
         word="联机;MMO",
@@ -373,7 +376,28 @@ local keyConcepts={
 }
 
 ---@type DD.Entry[]
+local keyConcepts2={
+    {
+        word="语言",
+        text="语言支持会影响推流推给谁，优先支持中英日，其它的没时间加就算了\n另见Steam文献库 “在 Steam 上曝光”",
+    },
+    {
+        word="流量;点击",
+        text="商店页面的点击和转化率本身不重要，不影响推流\n另见Steam文献库 “在 Steam 上曝光”",
+    },
+    {
+        word="评论;好评;差评;好评率",
+        text="好评率只会在低于40%时扣分，其余情况都没差 不用管\n另见Steam文献库 “在 Steam 上曝光”",
+    },
+}
+
+---@type DD.Entry[]
 local utils={
+    {
+        word="help",
+        text="这里是MrZ的独游宣发便民bot，可以发送例如 #愿望单 查询各种常见概念",
+        link="github🐙.com/MrZ626/distribution_tutorial （去掉防吞章鱼）",
+    },
     {
         word="TB;True Blue",
         text="独立游戏海外发行服务商",
@@ -384,10 +408,15 @@ local utils={
         title="最近比较火的提供餐饮业开店咨询的勇哥，有不少出圈名场面",
         link="space.bilibili.com/3546801669933097",
     },
+    {
+        word="模拟;模拟类;模拟器;经营模拟;模拟经营;恐怖;3D恐怖;恐怖类;3D恐怖类",
+        text="3D恐怖和模拟经营是高度推荐的新手品类，开发难度相对低，销售数据普遍也较好",
+    },
 }
 
 loadData(orig)
 loadData(keyConcepts)
+loadData(keyConcepts2)
 loadData(utils)
 
 LOG('info', "Distribution Dict Data Loaded, total "..#zict.entryList.." entries")
